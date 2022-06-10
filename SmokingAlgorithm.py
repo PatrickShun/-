@@ -4,19 +4,19 @@
 
 l1 = [8,9,5,6,4,3,1,2,7]
 
-for n in range(8):
-    for i in range(len(l1)-1):
-        j = len(l1) - (i+1)
-        k = j - 1
-
-        print(l1[j],l1[k])
-        if l1[k] < l1[j]:
-            print("PASS")
-        else:
-            l1[j],l1[k] = l1[k],l1[j]
+def MySmoke():
+    for n in range(8): # 循环列表的数值，l1[n]为列表数值；
+        p = n+1
+        x = l1[n]
+        y = l1[p]
+        if x < y:
             print("换")
-
-print(l1)
+            l1[n],l1[p] = l1[p],l1[n]
+        else:
+            print("PASS")
+    print(l1)
+for i in range(len(l1)):
+    MySmoke()
 
 
 # print(l1[9-1])
